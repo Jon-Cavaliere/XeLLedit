@@ -1052,7 +1052,7 @@ void CharGrid::increaseGridSize(uint8_t dir)
 		// Left
 		case 2:
 			// Add a new column to the left of grid
-			if (m_Width < 148) // Thanks @SendingThruHardware for limit info
+			if (m_Width < 146) // Thanks @SendingThruHardware for limit info 
 			{
 				m_Width += 1;
 				for (int i = 0; i < m_Height; i++)
@@ -1065,7 +1065,7 @@ void CharGrid::increaseGridSize(uint8_t dir)
 		// Right
 		case 3:
 			// Add a new column to the Right of grid
-			if (m_Width < 148) // Thanks @SendingThruHardware for limit info
+			if (m_Width < 146) // Thanks @SendingThruHardware for limit info
 			{
 				m_Width += 1;
 				for (int i = 0; i < m_Height; i++)
