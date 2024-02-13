@@ -1052,22 +1052,28 @@ void CharGrid::increaseGridSize(uint8_t dir)
 		// Left
 		case 2:
 			// Add a new column to the left of grid
-			m_Width += 1;
-			for (int i = 0; i < m_Height; i++)
+			if (m_Width < 148) // Thanks @SendingThruHardware for limit info
 			{
-				col.push_back(32);
+				m_Width += 1;
+				for (int i = 0; i < m_Height; i++)
+				{
+					col.push_back(32);
+				}
+				m_Tiles.insert(m_Tiles.begin(), col);
 			}
-			m_Tiles.insert(m_Tiles.begin(), col);
 			break;
 		// Right
 		case 3:
 			// Add a new column to the Right of grid
-			m_Width += 1;
-			for (int i = 0; i < m_Height; i++)
+			if (m_Width < 148) // Thanks @SendingThruHardware for limit info
 			{
-				col.push_back(32);
+				m_Width += 1;
+				for (int i = 0; i < m_Height; i++)
+				{
+					col.push_back(32);
+				}
+				m_Tiles.insert(m_Tiles.end(), col);
 			}
-			m_Tiles.insert(m_Tiles.end(), col);
 			break;	
 	}
 }

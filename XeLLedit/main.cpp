@@ -7,7 +7,8 @@
 	-- Codeus 
 
 	Special Thanks To:
-	* Cheez
+	* Cheez for idea and guidance
+	* SendingThruHardware for testing and width limit
 */
 
 #include "App.h"
