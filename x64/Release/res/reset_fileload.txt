@@ -1,0 +1,1 @@
+This is because windows api is weird and dumb. It wouldn't let the program save again after using the open file dialog. I think it's because it put a lock on that file even though I used CloseHandle() on it which is supposed to free it up. 

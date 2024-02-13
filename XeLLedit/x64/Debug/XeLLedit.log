@@ -1,0 +1,56 @@
+﻿  CharGrid.cpp
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(76,23): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(76,23): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(81,23): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(81,23): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(83,24): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(83,24): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(87,46): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(87,46): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(90,26): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(90,26): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(103,28): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(103,28): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(105,25): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(105,25): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(109,46): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(109,46): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(112,26): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(112,26): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(121,23): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(121,23): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(123,25): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(123,25): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(127,46): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(127,46): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(130,26): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(130,26): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(143,28): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(143,28): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(145,25): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(145,25): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(149,46): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(149,46): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(152,25): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(152,25): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(161,24): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(161,24): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(161,56): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(161,56): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(165,24): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(165,24): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(165,56): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(165,56): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(169,24): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(169,24): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(169,56): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(169,56): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(181,24): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(181,24): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(181,56): warning C4305: 'argument': truncation from 'SDL_KeyCode' to 'uint8_t'
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(181,56): warning C4309: 'argument': truncation of constant value
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(205,16): warning C4244: '=': conversion from 'int16_t' to 'uint8_t', possible loss of data
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(431,23): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(440,24): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+C:\Programming\c++_ws\XeLLedit\XeLLedit\CharGrid.cpp(491): warning C4172: returning address of local variable or temporary: garbageCatch
+  XeLLedit.vcxproj -> C:\Programming\c++_ws\XeLLedit\x64\Debug\XeLLedit.exe

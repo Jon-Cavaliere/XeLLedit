@@ -1,0 +1,1559 @@
+#include <stdint.h>
+
+/*
+	Not the greatest code, but I wrote a python script to generate it for me. Easy peasy and it works (hopefully).
+*/
+
+static uint8_t utf_to_cp473(uint16_t charcode)
+{
+	switch (charcode)
+	{
+	case(0x0000):
+		return 0x00;
+		break;
+	case(0x0001):
+		return 0x01;
+		break;
+	case(0x0002):
+		return 0x02;
+		break;
+	case(0x0003):
+		return 0x03;
+		break;
+	case(0x0004):
+		return 0x04;
+		break;
+	case(0x0005):
+		return 0x05;
+		break;
+	case(0x0006):
+		return 0x06;
+		break;
+	case(0x0007):
+		return 0x07;
+		break;
+	case(0x0008):
+		return 0x08;
+		break;
+	case(0x0009):
+		return 0x09;
+		break;
+	case(0x000a):
+		return 0x0a;
+		break;
+	case(0x000b):
+		return 0x0b;
+		break;
+	case(0x000c):
+		return 0x0c;
+		break;
+	case(0x000d):
+		return 0x0d;
+		break;
+	case(0x000e):
+		return 0x0e;
+		break;
+	case(0x000f):
+		return 0x0f;
+		break;
+	case(0x0010):
+		return 0x10;
+		break;
+	case(0x0011):
+		return 0x11;
+		break;
+	case(0x0012):
+		return 0x12;
+		break;
+	case(0x0013):
+		return 0x13;
+		break;
+	case(0x0014):
+		return 0x14;
+		break;
+	case(0x0015):
+		return 0x15;
+		break;
+	case(0x0016):
+		return 0x16;
+		break;
+	case(0x0017):
+		return 0x17;
+		break;
+	case(0x0018):
+		return 0x18;
+		break;
+	case(0x0019):
+		return 0x19;
+		break;
+	case(0x001a):
+		return 0x1a;
+		break;
+	case(0x001b):
+		return 0x1b;
+		break;
+	case(0x001c):
+		return 0x1c;
+		break;
+	case(0x001d):
+		return 0x1d;
+		break;
+	case(0x001e):
+		return 0x1e;
+		break;
+	case(0x001f):
+		return 0x1f;
+		break;
+	case(0x0020):
+		return 0x20;
+		break;
+	case(0x0021):
+		return 0x21;
+		break;
+	case(0x0022):
+		return 0x22;
+		break;
+	case(0x0023):
+		return 0x23;
+		break;
+	case(0x0024):
+		return 0x24;
+		break;
+	case(0x0025):
+		return 0x25;
+		break;
+	case(0x0026):
+		return 0x26;
+		break;
+	case(0x0027):
+		return 0x27;
+		break;
+	case(0x0028):
+		return 0x28;
+		break;
+	case(0x0029):
+		return 0x29;
+		break;
+	case(0x002a):
+		return 0x2a;
+		break;
+	case(0x002b):
+		return 0x2b;
+		break;
+	case(0x002c):
+		return 0x2c;
+		break;
+	case(0x002d):
+		return 0x2d;
+		break;
+	case(0x002e):
+		return 0x2e;
+		break;
+	case(0x002f):
+		return 0x2f;
+		break;
+	case(0x0030):
+		return 0x30;
+		break;
+	case(0x0031):
+		return 0x31;
+		break;
+	case(0x0032):
+		return 0x32;
+		break;
+	case(0x0033):
+		return 0x33;
+		break;
+	case(0x0034):
+		return 0x34;
+		break;
+	case(0x0035):
+		return 0x35;
+		break;
+	case(0x0036):
+		return 0x36;
+		break;
+	case(0x0037):
+		return 0x37;
+		break;
+	case(0x0038):
+		return 0x38;
+		break;
+	case(0x0039):
+		return 0x39;
+		break;
+	case(0x003a):
+		return 0x3a;
+		break;
+	case(0x003b):
+		return 0x3b;
+		break;
+	case(0x003c):
+		return 0x3c;
+		break;
+	case(0x003d):
+		return 0x3d;
+		break;
+	case(0x003e):
+		return 0x3e;
+		break;
+	case(0x003f):
+		return 0x3f;
+		break;
+	case(0x0040):
+		return 0x40;
+		break;
+	case(0x0041):
+		return 0x41;
+		break;
+	case(0x0042):
+		return 0x42;
+		break;
+	case(0x0043):
+		return 0x43;
+		break;
+	case(0x0044):
+		return 0x44;
+		break;
+	case(0x0045):
+		return 0x45;
+		break;
+	case(0x0046):
+		return 0x46;
+		break;
+	case(0x0047):
+		return 0x47;
+		break;
+	case(0x0048):
+		return 0x48;
+		break;
+	case(0x0049):
+		return 0x49;
+		break;
+	case(0x004a):
+		return 0x4a;
+		break;
+	case(0x004b):
+		return 0x4b;
+		break;
+	case(0x004c):
+		return 0x4c;
+		break;
+	case(0x004d):
+		return 0x4d;
+		break;
+	case(0x004e):
+		return 0x4e;
+		break;
+	case(0x004f):
+		return 0x4f;
+		break;
+	case(0x0050):
+		return 0x50;
+		break;
+	case(0x0051):
+		return 0x51;
+		break;
+	case(0x0052):
+		return 0x52;
+		break;
+	case(0x0053):
+		return 0x53;
+		break;
+	case(0x0054):
+		return 0x54;
+		break;
+	case(0x0055):
+		return 0x55;
+		break;
+	case(0x0056):
+		return 0x56;
+		break;
+	case(0x0057):
+		return 0x57;
+		break;
+	case(0x0058):
+		return 0x58;
+		break;
+	case(0x0059):
+		return 0x59;
+		break;
+	case(0x005a):
+		return 0x5a;
+		break;
+	case(0x005b):
+		return 0x5b;
+		break;
+	case(0x005c):
+		return 0x5c;
+		break;
+	case(0x005d):
+		return 0x5d;
+		break;
+	case(0x005e):
+		return 0x5e;
+		break;
+	case(0x005f):
+		return 0x5f;
+		break;
+	case(0x0060):
+		return 0x60;
+		break;
+	case(0x0061):
+		return 0x61;
+		break;
+	case(0x0062):
+		return 0x62;
+		break;
+	case(0x0063):
+		return 0x63;
+		break;
+	case(0x0064):
+		return 0x64;
+		break;
+	case(0x0065):
+		return 0x65;
+		break;
+	case(0x0066):
+		return 0x66;
+		break;
+	case(0x0067):
+		return 0x67;
+		break;
+	case(0x0068):
+		return 0x68;
+		break;
+	case(0x0069):
+		return 0x69;
+		break;
+	case(0x006a):
+		return 0x6a;
+		break;
+	case(0x006b):
+		return 0x6b;
+		break;
+	case(0x006c):
+		return 0x6c;
+		break;
+	case(0x006d):
+		return 0x6d;
+		break;
+	case(0x006e):
+		return 0x6e;
+		break;
+	case(0x006f):
+		return 0x6f;
+		break;
+	case(0x0070):
+		return 0x70;
+		break;
+	case(0x0071):
+		return 0x71;
+		break;
+	case(0x0072):
+		return 0x72;
+		break;
+	case(0x0073):
+		return 0x73;
+		break;
+	case(0x0074):
+		return 0x74;
+		break;
+	case(0x0075):
+		return 0x75;
+		break;
+	case(0x0076):
+		return 0x76;
+		break;
+	case(0x0077):
+		return 0x77;
+		break;
+	case(0x0078):
+		return 0x78;
+		break;
+	case(0x0079):
+		return 0x79;
+		break;
+	case(0x007a):
+		return 0x7a;
+		break;
+	case(0x007b):
+		return 0x7b;
+		break;
+	case(0x007c):
+		return 0x7c;
+		break;
+	case(0x007d):
+		return 0x7d;
+		break;
+	case(0x007e):
+		return 0x7e;
+		break;
+	case(0x007f):
+		return 0x7f;
+		break;
+	case(0x00c7):
+		return 0x80;
+		break;
+	case(0x00fc):
+		return 0x81;
+		break;
+	case(0x00e9):
+		return 0x82;
+		break;
+	case(0x00e2):
+		return 0x83;
+		break;
+	case(0x00e4):
+		return 0x84;
+		break;
+	case(0x00e0):
+		return 0x85;
+		break;
+	case(0x00e5):
+		return 0x86;
+		break;
+	case(0x00e7):
+		return 0x87;
+		break;
+	case(0x00ea):
+		return 0x88;
+		break;
+	case(0x00eb):
+		return 0x89;
+		break;
+	case(0x00e8):
+		return 0x8a;
+		break;
+	case(0x00ef):
+		return 0x8b;
+		break;
+	case(0x00ee):
+		return 0x8c;
+		break;
+	case(0x00ec):
+		return 0x8d;
+		break;
+	case(0x00c4):
+		return 0x8e;
+		break;
+	case(0x00c5):
+		return 0x8f;
+		break;
+	case(0x00c9):
+		return 0x90;
+		break;
+	case(0x00e6):
+		return 0x91;
+		break;
+	case(0x00c6):
+		return 0x92;
+		break;
+	case(0x00f4):
+		return 0x93;
+		break;
+	case(0x00f6):
+		return 0x94;
+		break;
+	case(0x00f2):
+		return 0x95;
+		break;
+	case(0x00fb):
+		return 0x96;
+		break;
+	case(0x00f9):
+		return 0x97;
+		break;
+	case(0x00ff):
+		return 0x98;
+		break;
+	case(0x00d6):
+		return 0x99;
+		break;
+	case(0x00dc):
+		return 0x9a;
+		break;
+	case(0x00a2):
+		return 0x9b;
+		break;
+	case(0x00a3):
+		return 0x9c;
+		break;
+	case(0x00a5):
+		return 0x9d;
+		break;
+	case(0x20a7):
+		return 0x9e;
+		break;
+	case(0x0192):
+		return 0x9f;
+		break;
+	case(0x00e1):
+		return 0xa0;
+		break;
+	case(0x00ed):
+		return 0xa1;
+		break;
+	case(0x00f3):
+		return 0xa2;
+		break;
+	case(0x00fa):
+		return 0xa3;
+		break;
+	case(0x00f1):
+		return 0xa4;
+		break;
+	case(0x00d1):
+		return 0xa5;
+		break;
+	case(0x00aa):
+		return 0xa6;
+		break;
+	case(0x00ba):
+		return 0xa7;
+		break;
+	case(0x00bf):
+		return 0xa8;
+		break;
+	case(0x2310):
+		return 0xa9;
+		break;
+	case(0x00ac):
+		return 0xaa;
+		break;
+	case(0x00bd):
+		return 0xab;
+		break;
+	case(0x00bc):
+		return 0xac;
+		break;
+	case(0x00a1):
+		return 0xad;
+		break;
+	case(0x00ab):
+		return 0xae;
+		break;
+	case(0x00bb):
+		return 0xaf;
+		break;
+	case(0x2591):
+		return 0xb0;
+		break;
+	case(0x2592):
+		return 0xb1;
+		break;
+	case(0x2593):
+		return 0xb2;
+		break;
+	case(0x2502):
+		return 0xb3;
+		break;
+	case(0x2524):
+		return 0xb4;
+		break;
+	case(0x2561):
+		return 0xb5;
+		break;
+	case(0x2562):
+		return 0xb6;
+		break;
+	case(0x2556):
+		return 0xb7;
+		break;
+	case(0x2555):
+		return 0xb8;
+		break;
+	case(0x2563):
+		return 0xb9;
+		break;
+	case(0x2551):
+		return 0xba;
+		break;
+	case(0x2557):
+		return 0xbb;
+		break;
+	case(0x255d):
+		return 0xbc;
+		break;
+	case(0x255c):
+		return 0xbd;
+		break;
+	case(0x255b):
+		return 0xbe;
+		break;
+	case(0x2510):
+		return 0xbf;
+		break;
+	case(0x2514):
+		return 0xc0;
+		break;
+	case(0x2534):
+		return 0xc1;
+		break;
+	case(0x252c):
+		return 0xc2;
+		break;
+	case(0x251c):
+		return 0xc3;
+		break;
+	case(0x2500):
+		return 0xc4;
+		break;
+	case(0x253c):
+		return 0xc5;
+		break;
+	case(0x255e):
+		return 0xc6;
+		break;
+	case(0x255f):
+		return 0xc7;
+		break;
+	case(0x255a):
+		return 0xc8;
+		break;
+	case(0x2554):
+		return 0xc9;
+		break;
+	case(0x2569):
+		return 0xca;
+		break;
+	case(0x2566):
+		return 0xcb;
+		break;
+	case(0x2560):
+		return 0xcc;
+		break;
+	case(0x2550):
+		return 0xcd;
+		break;
+	case(0x256c):
+		return 0xce;
+		break;
+	case(0x2567):
+		return 0xcf;
+		break;
+	case(0x2568):
+		return 0xd0;
+		break;
+	case(0x2564):
+		return 0xd1;
+		break;
+	case(0x2565):
+		return 0xd2;
+		break;
+	case(0x2559):
+		return 0xd3;
+		break;
+	case(0x2558):
+		return 0xd4;
+		break;
+	case(0x2552):
+		return 0xd5;
+		break;
+	case(0x2553):
+		return 0xd6;
+		break;
+	case(0x256b):
+		return 0xd7;
+		break;
+	case(0x256a):
+		return 0xd8;
+		break;
+	case(0x2518):
+		return 0xd9;
+		break;
+	case(0x250c):
+		return 0xda;
+		break;
+	case(0x2588):
+		return 0xdb;
+		break;
+	case(0x2584):
+		return 0xdc;
+		break;
+	case(0x258c):
+		return 0xdd;
+		break;
+	case(0x2590):
+		return 0xde;
+		break;
+	case(0x2580):
+		return 0xdf;
+		break;
+	case(0x03b1):
+		return 0xe0;
+		break;
+	case(0x00df):
+		return 0xe1;
+		break;
+	case(0x0393):
+		return 0xe2;
+		break;
+	case(0x03c0):
+		return 0xe3;
+		break;
+	case(0x03a3):
+		return 0xe4;
+		break;
+	case(0x03c3):
+		return 0xe5;
+		break;
+	case(0x00b5):
+		return 0xe6;
+		break;
+	case(0x03c4):
+		return 0xe7;
+		break;
+	case(0x03a6):
+		return 0xe8;
+		break;
+	case(0x0398):
+		return 0xe9;
+		break;
+	case(0x03a9):
+		return 0xea;
+		break;
+	case(0x03b4):
+		return 0xeb;
+		break;
+	case(0x221e):
+		return 0xec;
+		break;
+	case(0x03c6):
+		return 0xed;
+		break;
+	case(0x03b5):
+		return 0xee;
+		break;
+	case(0x2229):
+		return 0xef;
+		break;
+	case(0x2261):
+		return 0xf0;
+		break;
+	case(0x00b1):
+		return 0xf1;
+		break;
+	case(0x2265):
+		return 0xf2;
+		break;
+	case(0x2264):
+		return 0xf3;
+		break;
+	case(0x2320):
+		return 0xf4;
+		break;
+	case(0x2321):
+		return 0xf5;
+		break;
+	case(0x00f7):
+		return 0xf6;
+		break;
+	case(0x2248):
+		return 0xf7;
+		break;
+	case(0x00b0):
+		return 0xf8;
+		break;
+	case(0x2219):
+		return 0xf9;
+		break;
+	case(0x00b7):
+		return 0xfa;
+		break;
+	case(0x221a):
+		return 0xfb;
+		break;
+	case(0x207f):
+		return 0xfc;
+		break;
+	case(0x00b2):
+		return 0xfd;
+		break;
+	case(0x25a0):
+		return 0xfe;
+		break;
+	case(0x00a0):
+		return 0xff;
+		break;
+	default:
+		return 0x00;
+	}
+}
+
+static uint16_t cp473_to_utf(uint8_t charcode)
+{
+	switch (charcode)
+	{
+	case(0x00):
+		return 0x0000;
+		break;
+	case(0x01):
+		return 0x0001;
+		break;
+	case(0x02):
+		return 0x0002;
+		break;
+	case(0x03):
+		return 0x0003;
+		break;
+	case(0x04):
+		return 0x0004;
+		break;
+	case(0x05):
+		return 0x0005;
+		break;
+	case(0x06):
+		return 0x0006;
+		break;
+	case(0x07):
+		return 0x0007;
+		break;
+	case(0x08):
+		return 0x0008;
+		break;
+	case(0x09):
+		return 0x0009;
+		break;
+	case(0x0a):
+		return 0x000a;
+		break;
+	case(0x0b):
+		return 0x000b;
+		break;
+	case(0x0c):
+		return 0x000c;
+		break;
+	case(0x0d):
+		return 0x000d;
+		break;
+	case(0x0e):
+		return 0x000e;
+		break;
+	case(0x0f):
+		return 0x000f;
+		break;
+	case(0x10):
+		return 0x0010;
+		break;
+	case(0x11):
+		return 0x0011;
+		break;
+	case(0x12):
+		return 0x0012;
+		break;
+	case(0x13):
+		return 0x0013;
+		break;
+	case(0x14):
+		return 0x0014;
+		break;
+	case(0x15):
+		return 0x0015;
+		break;
+	case(0x16):
+		return 0x0016;
+		break;
+	case(0x17):
+		return 0x0017;
+		break;
+	case(0x18):
+		return 0x0018;
+		break;
+	case(0x19):
+		return 0x0019;
+		break;
+	case(0x1a):
+		return 0x001a;
+		break;
+	case(0x1b):
+		return 0x001b;
+		break;
+	case(0x1c):
+		return 0x001c;
+		break;
+	case(0x1d):
+		return 0x001d;
+		break;
+	case(0x1e):
+		return 0x001e;
+		break;
+	case(0x1f):
+		return 0x001f;
+		break;
+	case(0x20):
+		return 0x0020;
+		break;
+	case(0x21):
+		return 0x0021;
+		break;
+	case(0x22):
+		return 0x0022;
+		break;
+	case(0x23):
+		return 0x0023;
+		break;
+	case(0x24):
+		return 0x0024;
+		break;
+	case(0x25):
+		return 0x0025;
+		break;
+	case(0x26):
+		return 0x0026;
+		break;
+	case(0x27):
+		return 0x0027;
+		break;
+	case(0x28):
+		return 0x0028;
+		break;
+	case(0x29):
+		return 0x0029;
+		break;
+	case(0x2a):
+		return 0x002a;
+		break;
+	case(0x2b):
+		return 0x002b;
+		break;
+	case(0x2c):
+		return 0x002c;
+		break;
+	case(0x2d):
+		return 0x002d;
+		break;
+	case(0x2e):
+		return 0x002e;
+		break;
+	case(0x2f):
+		return 0x002f;
+		break;
+	case(0x30):
+		return 0x0030;
+		break;
+	case(0x31):
+		return 0x0031;
+		break;
+	case(0x32):
+		return 0x0032;
+		break;
+	case(0x33):
+		return 0x0033;
+		break;
+	case(0x34):
+		return 0x0034;
+		break;
+	case(0x35):
+		return 0x0035;
+		break;
+	case(0x36):
+		return 0x0036;
+		break;
+	case(0x37):
+		return 0x0037;
+		break;
+	case(0x38):
+		return 0x0038;
+		break;
+	case(0x39):
+		return 0x0039;
+		break;
+	case(0x3a):
+		return 0x003a;
+		break;
+	case(0x3b):
+		return 0x003b;
+		break;
+	case(0x3c):
+		return 0x003c;
+		break;
+	case(0x3d):
+		return 0x003d;
+		break;
+	case(0x3e):
+		return 0x003e;
+		break;
+	case(0x3f):
+		return 0x003f;
+		break;
+	case(0x40):
+		return 0x0040;
+		break;
+	case(0x41):
+		return 0x0041;
+		break;
+	case(0x42):
+		return 0x0042;
+		break;
+	case(0x43):
+		return 0x0043;
+		break;
+	case(0x44):
+		return 0x0044;
+		break;
+	case(0x45):
+		return 0x0045;
+		break;
+	case(0x46):
+		return 0x0046;
+		break;
+	case(0x47):
+		return 0x0047;
+		break;
+	case(0x48):
+		return 0x0048;
+		break;
+	case(0x49):
+		return 0x0049;
+		break;
+	case(0x4a):
+		return 0x004a;
+		break;
+	case(0x4b):
+		return 0x004b;
+		break;
+	case(0x4c):
+		return 0x004c;
+		break;
+	case(0x4d):
+		return 0x004d;
+		break;
+	case(0x4e):
+		return 0x004e;
+		break;
+	case(0x4f):
+		return 0x004f;
+		break;
+	case(0x50):
+		return 0x0050;
+		break;
+	case(0x51):
+		return 0x0051;
+		break;
+	case(0x52):
+		return 0x0052;
+		break;
+	case(0x53):
+		return 0x0053;
+		break;
+	case(0x54):
+		return 0x0054;
+		break;
+	case(0x55):
+		return 0x0055;
+		break;
+	case(0x56):
+		return 0x0056;
+		break;
+	case(0x57):
+		return 0x0057;
+		break;
+	case(0x58):
+		return 0x0058;
+		break;
+	case(0x59):
+		return 0x0059;
+		break;
+	case(0x5a):
+		return 0x005a;
+		break;
+	case(0x5b):
+		return 0x005b;
+		break;
+	case(0x5c):
+		return 0x005c;
+		break;
+	case(0x5d):
+		return 0x005d;
+		break;
+	case(0x5e):
+		return 0x005e;
+		break;
+	case(0x5f):
+		return 0x005f;
+		break;
+	case(0x60):
+		return 0x0060;
+		break;
+	case(0x61):
+		return 0x0061;
+		break;
+	case(0x62):
+		return 0x0062;
+		break;
+	case(0x63):
+		return 0x0063;
+		break;
+	case(0x64):
+		return 0x0064;
+		break;
+	case(0x65):
+		return 0x0065;
+		break;
+	case(0x66):
+		return 0x0066;
+		break;
+	case(0x67):
+		return 0x0067;
+		break;
+	case(0x68):
+		return 0x0068;
+		break;
+	case(0x69):
+		return 0x0069;
+		break;
+	case(0x6a):
+		return 0x006a;
+		break;
+	case(0x6b):
+		return 0x006b;
+		break;
+	case(0x6c):
+		return 0x006c;
+		break;
+	case(0x6d):
+		return 0x006d;
+		break;
+	case(0x6e):
+		return 0x006e;
+		break;
+	case(0x6f):
+		return 0x006f;
+		break;
+	case(0x70):
+		return 0x0070;
+		break;
+	case(0x71):
+		return 0x0071;
+		break;
+	case(0x72):
+		return 0x0072;
+		break;
+	case(0x73):
+		return 0x0073;
+		break;
+	case(0x74):
+		return 0x0074;
+		break;
+	case(0x75):
+		return 0x0075;
+		break;
+	case(0x76):
+		return 0x0076;
+		break;
+	case(0x77):
+		return 0x0077;
+		break;
+	case(0x78):
+		return 0x0078;
+		break;
+	case(0x79):
+		return 0x0079;
+		break;
+	case(0x7a):
+		return 0x007a;
+		break;
+	case(0x7b):
+		return 0x007b;
+		break;
+	case(0x7c):
+		return 0x007c;
+		break;
+	case(0x7d):
+		return 0x007d;
+		break;
+	case(0x7e):
+		return 0x007e;
+		break;
+	case(0x7f):
+		return 0x007f;
+		break;
+	case(0x80):
+		return 0x00c7;
+		break;
+	case(0x81):
+		return 0x00fc;
+		break;
+	case(0x82):
+		return 0x00e9;
+		break;
+	case(0x83):
+		return 0x00e2;
+		break;
+	case(0x84):
+		return 0x00e4;
+		break;
+	case(0x85):
+		return 0x00e0;
+		break;
+	case(0x86):
+		return 0x00e5;
+		break;
+	case(0x87):
+		return 0x00e7;
+		break;
+	case(0x88):
+		return 0x00ea;
+		break;
+	case(0x89):
+		return 0x00eb;
+		break;
+	case(0x8a):
+		return 0x00e8;
+		break;
+	case(0x8b):
+		return 0x00ef;
+		break;
+	case(0x8c):
+		return 0x00ee;
+		break;
+	case(0x8d):
+		return 0x00ec;
+		break;
+	case(0x8e):
+		return 0x00c4;
+		break;
+	case(0x8f):
+		return 0x00c5;
+		break;
+	case(0x90):
+		return 0x00c9;
+		break;
+	case(0x91):
+		return 0x00e6;
+		break;
+	case(0x92):
+		return 0x00c6;
+		break;
+	case(0x93):
+		return 0x00f4;
+		break;
+	case(0x94):
+		return 0x00f6;
+		break;
+	case(0x95):
+		return 0x00f2;
+		break;
+	case(0x96):
+		return 0x00fb;
+		break;
+	case(0x97):
+		return 0x00f9;
+		break;
+	case(0x98):
+		return 0x00ff;
+		break;
+	case(0x99):
+		return 0x00d6;
+		break;
+	case(0x9a):
+		return 0x00dc;
+		break;
+	case(0x9b):
+		return 0x00a2;
+		break;
+	case(0x9c):
+		return 0x00a3;
+		break;
+	case(0x9d):
+		return 0x00a5;
+		break;
+	case(0x9e):
+		return 0x20a7;
+		break;
+	case(0x9f):
+		return 0x0192;
+		break;
+	case(0xa0):
+		return 0x00e1;
+		break;
+	case(0xa1):
+		return 0x00ed;
+		break;
+	case(0xa2):
+		return 0x00f3;
+		break;
+	case(0xa3):
+		return 0x00fa;
+		break;
+	case(0xa4):
+		return 0x00f1;
+		break;
+	case(0xa5):
+		return 0x00d1;
+		break;
+	case(0xa6):
+		return 0x00aa;
+		break;
+	case(0xa7):
+		return 0x00ba;
+		break;
+	case(0xa8):
+		return 0x00bf;
+		break;
+	case(0xa9):
+		return 0x2310;
+		break;
+	case(0xaa):
+		return 0x00ac;
+		break;
+	case(0xab):
+		return 0x00bd;
+		break;
+	case(0xac):
+		return 0x00bc;
+		break;
+	case(0xad):
+		return 0x00a1;
+		break;
+	case(0xae):
+		return 0x00ab;
+		break;
+	case(0xaf):
+		return 0x00bb;
+		break;
+	case(0xb0):
+		return 0x2591;
+		break;
+	case(0xb1):
+		return 0x2592;
+		break;
+	case(0xb2):
+		return 0x2593;
+		break;
+	case(0xb3):
+		return 0x2502;
+		break;
+	case(0xb4):
+		return 0x2524;
+		break;
+	case(0xb5):
+		return 0x2561;
+		break;
+	case(0xb6):
+		return 0x2562;
+		break;
+	case(0xb7):
+		return 0x2556;
+		break;
+	case(0xb8):
+		return 0x2555;
+		break;
+	case(0xb9):
+		return 0x2563;
+		break;
+	case(0xba):
+		return 0x2551;
+		break;
+	case(0xbb):
+		return 0x2557;
+		break;
+	case(0xbc):
+		return 0x255d;
+		break;
+	case(0xbd):
+		return 0x255c;
+		break;
+	case(0xbe):
+		return 0x255b;
+		break;
+	case(0xbf):
+		return 0x2510;
+		break;
+	case(0xc0):
+		return 0x2514;
+		break;
+	case(0xc1):
+		return 0x2534;
+		break;
+	case(0xc2):
+		return 0x252c;
+		break;
+	case(0xc3):
+		return 0x251c;
+		break;
+	case(0xc4):
+		return 0x2500;
+		break;
+	case(0xc5):
+		return 0x253c;
+		break;
+	case(0xc6):
+		return 0x255e;
+		break;
+	case(0xc7):
+		return 0x255f;
+		break;
+	case(0xc8):
+		return 0x255a;
+		break;
+	case(0xc9):
+		return 0x2554;
+		break;
+	case(0xca):
+		return 0x2569;
+		break;
+	case(0xcb):
+		return 0x2566;
+		break;
+	case(0xcc):
+		return 0x2560;
+		break;
+	case(0xcd):
+		return 0x2550;
+		break;
+	case(0xce):
+		return 0x256c;
+		break;
+	case(0xcf):
+		return 0x2567;
+		break;
+	case(0xd0):
+		return 0x2568;
+		break;
+	case(0xd1):
+		return 0x2564;
+		break;
+	case(0xd2):
+		return 0x2565;
+		break;
+	case(0xd3):
+		return 0x2559;
+		break;
+	case(0xd4):
+		return 0x2558;
+		break;
+	case(0xd5):
+		return 0x2552;
+		break;
+	case(0xd6):
+		return 0x2553;
+		break;
+	case(0xd7):
+		return 0x256b;
+		break;
+	case(0xd8):
+		return 0x256a;
+		break;
+	case(0xd9):
+		return 0x2518;
+		break;
+	case(0xda):
+		return 0x250c;
+		break;
+	case(0xdb):
+		return 0x2588;
+		break;
+	case(0xdc):
+		return 0x2584;
+		break;
+	case(0xdd):
+		return 0x258c;
+		break;
+	case(0xde):
+		return 0x2590;
+		break;
+	case(0xdf):
+		return 0x2580;
+		break;
+	case(0xe0):
+		return 0x03b1;
+		break;
+	case(0xe1):
+		return 0x00df;
+		break;
+	case(0xe2):
+		return 0x0393;
+		break;
+	case(0xe3):
+		return 0x03c0;
+		break;
+	case(0xe4):
+		return 0x03a3;
+		break;
+	case(0xe5):
+		return 0x03c3;
+		break;
+	case(0xe6):
+		return 0x00b5;
+		break;
+	case(0xe7):
+		return 0x03c4;
+		break;
+	case(0xe8):
+		return 0x03a6;
+		break;
+	case(0xe9):
+		return 0x0398;
+		break;
+	case(0xea):
+		return 0x03a9;
+		break;
+	case(0xeb):
+		return 0x03b4;
+		break;
+	case(0xec):
+		return 0x221e;
+		break;
+	case(0xed):
+		return 0x03c6;
+		break;
+	case(0xee):
+		return 0x03b5;
+		break;
+	case(0xef):
+		return 0x2229;
+		break;
+	case(0xf0):
+		return 0x2261;
+		break;
+	case(0xf1):
+		return 0x00b1;
+		break;
+	case(0xf2):
+		return 0x2265;
+		break;
+	case(0xf3):
+		return 0x2264;
+		break;
+	case(0xf4):
+		return 0x2320;
+		break;
+	case(0xf5):
+		return 0x2321;
+		break;
+	case(0xf6):
+		return 0x00f7;
+		break;
+	case(0xf7):
+		return 0x2248;
+		break;
+	case(0xf8):
+		return 0x00b0;
+		break;
+	case(0xf9):
+		return 0x2219;
+		break;
+	case(0xfa):
+		return 0x00b7;
+		break;
+	case(0xfb):
+		return 0x221a;
+		break;
+	case(0xfc):
+		return 0x207f;
+		break;
+	case(0xfd):
+		return 0x00b2;
+		break;
+	case(0xfe):
+		return 0x25a0;
+		break;
+	case(0xff):
+		return 0x00a0;
+		break;
+	default:
+		return 0x0000;
+	}
+}
