@@ -7,6 +7,8 @@ It generates a fully formated asciiart.h file
 It's still in alpha and not fully tested! Some features may be buggy, and more features are planned for the future. 
 ## Controls
 
+- LEFT CLICK on grid to use selected tool (Draw paints active character)
+- RIGHT CLICK on tile already placed ON GRID to instantly select that tile as active character
 - Use <kbd>up</kbd> / <kbd>down</kbd> / <kbd>left</kbd> / <kbd>right</kbd> to translate the character grid
 - Use <kbd>shift</kbd>  To increase grid translation speed
 - Use <kbd>cntrl</kbd> + arrow key to increase size of grid in that direction
