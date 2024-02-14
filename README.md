@@ -19,7 +19,7 @@ It's still in alpha and not fully tested! Some features may be buggy, and more f
 
 ## Contributing
 
-Pull requests are welcome. Everyone can tinker. I invite it!
+Pull requests are welcome. Everyone can tinker. That's why it's here :)
 
 SDL2 and C++.
 
