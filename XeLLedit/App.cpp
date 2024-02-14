@@ -4,12 +4,12 @@
 // Version 0.3a adds grid resize keys
 	// CNTRL + Arrow Key - Increase grid size by one row/column in the direction of the arrow
 	// CNTRL + SHIFT + Arrow Key - Decrease grid size by one row/column in the direction of the arrow
-// Version 0.4a adds selection panel tools and buttons
+// Version 0.4a adds selection panel tools and buttons, and resizable window
 
 
 
 // It appears that the maximum width for the original XeLL Reloaded art is 74 characters
-App::App() : m_Running(true), m_Window(1280, 720, "XeLLedit by Codeus v0.3a"), m_Grid(74, 20), p_RateRegulator(nullptr)
+App::App() : m_Running(true), m_Window(1280, 720, "XeLLedit by Codeus v0.4a"), m_Grid(74, 20), p_RateRegulator(nullptr)
 {
 	p_RateRegulator = JC::RateRegulator::getInstance();
 }
@@ -34,7 +34,12 @@ void App::init()
 
 void App::update()
 {
-	m_Input.update();
+	m_Input.update(&m_Window);
+	if (m_Window.getResized())
+	{
+		m_Grid.resize(&m_Window);
+		m_Window.resetResized();
+	}
 	if (m_Input.shouldQuit())
 		m_Running = false;
 	

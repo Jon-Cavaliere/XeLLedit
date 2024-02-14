@@ -14,11 +14,15 @@ namespace JC
 		bool init();
 		void clean();
 
+		void resize(uint16_t width, uint16_t height);
+
 		SDL_Renderer* getRenderer();
 		SDL_Window* getWindow();
 
 		uint16_t getWidth();
 		uint16_t getHeight();
+		inline bool getResized() { return m_Resized; }
+		inline void resetResized() { m_Resized = false; }
 
 	private:
 		uint16_t m_Width;
@@ -26,6 +30,7 @@ namespace JC
 		std::string m_Title;
 		SDL_Window* m_Window = NULL;
 		SDL_Renderer* p_Renderer = NULL;
+		bool m_Resized;
 	};
 
 }

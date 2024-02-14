@@ -5,7 +5,7 @@ JC::Window::Window()
 { }
 
 JC::Window::Window(uint16_t width, uint16_t height, const char* title)
-    : m_Width(width), m_Height(height), m_Title(title)
+	: m_Width(width), m_Height(height), m_Title(title), m_Resized(false)
 { }
 
 bool JC::Window::init()
@@ -18,7 +18,7 @@ bool JC::Window::init()
 		// ----- Set up Window -----
 
 		//Create window
-		m_Window = SDL_CreateWindow(m_Title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_Width, m_Height, SDL_WINDOW_SHOWN);
+		m_Window = SDL_CreateWindow(m_Title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, m_Width, m_Height, SDL_WINDOW_RESIZABLE | SDL_WINDOW_SHOWN);
 		if (m_Window == NULL)
 		{
 			printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
@@ -77,6 +77,14 @@ void JC::Window::clean()
 	//Quit SDL
 	SDL_Quit();
 }
+
+void JC::Window::resize(uint16_t width, uint16_t height)
+{
+	m_Width = width;
+	m_Height = height;
+	m_Resized = true;
+}
+
 
 SDL_Renderer* JC::Window::getRenderer()
 {

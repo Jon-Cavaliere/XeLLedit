@@ -6,7 +6,7 @@ JC::Input::Input()
     m_MouseButtons[0] = m_MouseButtons[1] = m_MouseButtons[2] = 0;
 }
 
-void JC::Input::update()
+void JC::Input::update(Window* win)
 {
     // Reset Mouse Scroll State
     m_Scroll = 0;
@@ -14,6 +14,16 @@ void JC::Input::update()
 	while (SDL_PollEvent(&m_Event))
 	{
 		m_Keyboard.Update();
+
+        if (m_Event.type == SDL_WINDOWEVENT)
+        {
+            switch (m_Event.window.event)
+            {
+
+            case SDL_WINDOWEVENT_RESIZED:
+                win->resize(m_Event.window.data1, m_Event.window.data2);
+            }
+        }
 		if (m_Event.type == SDL_QUIT)
 			m_QuitFlag = true;
         else if (m_Event.type == SDL_MOUSEWHEEL)

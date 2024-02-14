@@ -23,6 +23,9 @@ public:
 	int32_t getW();
 	int32_t getH();
 
+	void setX(int32_t x);
+	void setY(int32_t y);
+
 private:
 	// Screen coordinate position of the button
 	JC::Vec2i m_Location;

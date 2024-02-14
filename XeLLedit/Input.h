@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include "Keyboard.h"
+#include "Window.h"
 // Create a keystate struct, then a keyboard class to store state
 
 
@@ -11,7 +12,7 @@ namespace JC
 	public:
 		Input();
 
-		void update();
+		void update(Window* win);
 
 		bool isKeyDown(uint8_t key);
 		bool isMouseDown(uint8_t button);

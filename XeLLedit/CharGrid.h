@@ -6,6 +6,7 @@
 #include "Input.h"
 #include "Vec2i.h"
 #include "Button.h"
+#include "Window.h"
 
 class CharGrid
 {
@@ -23,6 +24,7 @@ public:
 	void load(std::string filename);
 
 	void setWindow(SDL_Window* window);
+	void resize(JC::Window* win);
 private:
 	uint16_t m_Width;
 	uint16_t m_Height;

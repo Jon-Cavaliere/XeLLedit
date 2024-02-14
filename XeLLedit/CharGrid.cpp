@@ -11,7 +11,7 @@
 CharGrid::CharGrid(uint16_t w, uint16_t h, uint16_t winWidth, uint16_t winHeight) :
 	m_Width(w), m_Height(h), m_CharSheet(), m_CurChar(1), m_Initialized(false), m_Cursor(0, 0), m_TileSize(10), m_StartCoords(0, 0), m_ShowGrid(true),
 	m_MoveSpeed(1), m_WinWidth(winWidth), m_WinHeight(winHeight), m_TileSizePanel(20), m_HoverActive(-1), p_MainWindow(nullptr), m_ActiveTool(Tool::LINE),
-	m_MouseDrag(false), m_DragStart(0, 0), m_DrawButton(730, 540, 100, 50), m_LineButton(730, 600, 100, 50), m_RectButton(730, 660, 100, 50), m_Arrow()
+	m_MouseDrag(false), m_DragStart(0, 0), m_DrawButton(730, winHeight - 180, 100, 50), m_LineButton(730, winHeight - 120, 100, 50), m_RectButton(730, winHeight - 60, 100, 50), m_Arrow()
 {
 
 	// Default preview tile size is 2x actual tilesize
@@ -1023,6 +1023,16 @@ void CharGrid::addRect()
 			tileAtMouse(x, y) = m_CurChar;
 		}
 	}
+}
+
+void CharGrid::resize(JC::Window* win)
+{
+	m_WinWidth = win->getWidth();
+	m_WinHeight = win->getHeight();
+
+	m_DrawButton.setY(m_WinHeight - 180);
+	m_LineButton.setY(m_WinHeight - 120); 
+	m_RectButton.setY(m_WinHeight - 60); 
 }
 
 // CNTRL + SHIFT + Arrow Key increases the grid on that side by one column or row

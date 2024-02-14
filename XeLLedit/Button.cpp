@@ -63,3 +63,13 @@ int32_t Button::getH()
 {
 	return m_Dimensions[1];
 }
+
+void Button::setX(int32_t x)
+{
+	m_Location[0] = x;
+}
+
+void Button::setY(int32_t y)
+{
+	m_Location[1] = y;
+}
