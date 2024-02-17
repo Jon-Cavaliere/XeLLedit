@@ -13,6 +13,7 @@ It's still in alpha and not fully tested! Some features may be buggy, and more f
 - Use <kbd>shift</kbd>  To increase grid translation speed
 - Use <kbd>cntrl</kbd> + arrow key to increase size of grid in that direction
 - Use <kbd>cntrl</kbd> + <kbd>shift</kbd> + arrow key to decrease size of grid in that direction
+- Use <kbd>l-alt</kbd> + LEFT MOUSE drag to pan around the grid
 - Use <kbd>cntrl</kbd> + <kbd>l</kbd> to load an asciiart.h file (a clean copy can be found in main executable directory / res)
 - Use <kbd>cntrl</kbd> + <kbd>s</kbd> to save the asciiart.h file to output directory (main executable directory / output)
 - Use <kbd>cntrl</kbd> + <kbd>a</kbd> to set all cells in the grid to currently selected character
