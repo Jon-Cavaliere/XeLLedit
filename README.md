@@ -2,9 +2,12 @@
 
 Xelledit is a GUI program for creating custom ascii art for inclusion when building XeLL Reloaded
 It generates a fully formated asciiart.h file
+
 ![alt text](https://cavaliere.codes/images/XeLLedit.png)
 ![alt text](https://cavaliere.codes/files/xelledit.jpg)
+
 It's still in alpha and not fully tested! Some features may be buggy, and more features are planned for the future. 
+
 ## Controls
 
 - LEFT CLICK on grid to use selected tool (Draw paints active character)
