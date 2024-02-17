@@ -36,8 +36,9 @@ private:
 	bool m_ShowGrid;
 
 	// Tool constants
-	enum Tool {DRAW = 0, LINE, RECT};
+	enum Tool {DRAW = 0, LINE, RECT, PAN};
 	Tool m_ActiveTool;
+	Tool m_LastTool; // For switching back after PAN
 
 	// If tool is line or rect, flag to keep track of mouse being dragged, and start coords
 	bool m_MouseDrag;

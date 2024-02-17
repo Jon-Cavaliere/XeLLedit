@@ -11,7 +11,8 @@
 CharGrid::CharGrid(uint16_t w, uint16_t h, uint16_t winWidth, uint16_t winHeight) :
 	m_Width(w), m_Height(h), m_CharSheet(), m_CurChar(1), m_Initialized(false), m_Cursor(0, 0), m_TileSize(10), m_StartCoords(0, 0), m_ShowGrid(true),
 	m_MoveSpeed(1), m_WinWidth(winWidth), m_WinHeight(winHeight), m_TileSizePanel(20), m_HoverActive(-1), p_MainWindow(nullptr), m_ActiveTool(Tool::LINE),
-	m_MouseDrag(false), m_DragStart(0, 0), m_DrawButton(730, winHeight - 180, 100, 50), m_LineButton(730, winHeight - 120, 100, 50), m_RectButton(730, winHeight - 60, 100, 50), m_Arrow()
+	m_MouseDrag(false), m_DragStart(0, 0), m_DrawButton(730, winHeight - 180, 100, 50), m_LineButton(730, winHeight - 120, 100, 50), m_RectButton(730, winHeight - 60, 100, 50), m_Arrow(),
+	m_LastTool(Tool::DRAW)
 {
 
 	// Default preview tile size is 2x actual tilesize
@@ -159,6 +160,19 @@ void CharGrid::update(JC::Input* input)
 		}
 	}
 
+	// Pan tool automatically selected when left ALT is pressed
+	if (input->isKeyDown(SDLK_LALT))
+	{
+		if(m_ActiveTool != Tool::PAN)
+			m_LastTool = m_ActiveTool;
+		m_ActiveTool = Tool::PAN;
+	}
+	else
+	{
+		if(m_ActiveTool != m_LastTool)
+			m_ActiveTool = m_LastTool;
+	}
+
 	// Cntrl + C Clear all tiles ( Sets the to space )
 	if ((input->isKeyDown(SDLK_LCTRL) || input->isKeyDown(SDLK_RCTRL)) && input->isKeyDown(SDL_SCANCODE_C))
 		clear();
@@ -213,11 +227,20 @@ void CharGrid::update(JC::Input* input)
 			else
 			{
 				if (m_DrawButton.isHover())
+				{
 					m_ActiveTool = Tool::DRAW;
+					m_LastTool = m_ActiveTool;
+				}
 				else if (m_LineButton.isHover())
+				{
 					m_ActiveTool = Tool::LINE;
+					m_LastTool = m_ActiveTool;
+				}
 				else if (m_RectButton.isHover())
+				{
 					m_ActiveTool = Tool::RECT;
+					m_LastTool = m_ActiveTool;
+				}
 			}
 
 		}
@@ -285,6 +308,39 @@ void CharGrid::update(JC::Input* input)
 					m_MouseDrag = false;
 					// Add rect from m_DragStart to m_Cursor
 					addRect();
+				}
+			}
+		}
+		else if (m_ActiveTool == Tool::PAN)
+		{
+
+			// Left click starts moving the grid
+			if (input->isMouseDown(0))
+			{
+				if (!m_MouseDrag)
+				{
+					m_MouseDrag = true;
+					m_DragStart.set(m_Cursor[0], m_Cursor[1]);
+					int32_t transX = m_DragStart[0] - m_StartCoords[0];
+					int32_t transY = m_DragStart[1] - m_StartCoords[1];
+					m_DragStart.set(transX, transY);
+				}
+				else
+				{
+					int32_t transX = m_Cursor[0] - m_DragStart[0];
+					int32_t transY = m_Cursor[1] - m_DragStart[1];
+
+					m_StartCoords[0] = transX;
+					m_StartCoords[1] = transY;
+
+				}
+			}
+			else
+			{
+				// Check if mouse was being dragged
+				if (m_MouseDrag)
+				{
+					m_MouseDrag = false;
 				}
 			}
 		}
@@ -542,6 +598,15 @@ void CharGrid::render(SDL_Renderer* renderer)
 					}
 				}
 			}
+		}
+	}
+	else if (m_ActiveTool == Tool::PAN)
+	{
+		// Draw open Grabby hand lol
+
+		if (m_MouseDrag)
+		{
+			// Draw Closed Grabby hand
 		}
 	}
 	// Draw Selection panel
