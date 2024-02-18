@@ -1,6 +1,6 @@
 # XeLLedit
 
-Xelledit is a GUI program for creating custom ascii art for inclusion when building XeLL Reloaded
+Xelledit is a GUI program for creating custom ANSI art for inclusion when building XeLL Reloaded
 It generates a fully formated asciiart.h file
 
 ![alt text](https://cavaliere.codes/images/XeLLedit.png)
